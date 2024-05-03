@@ -403,4 +403,8 @@ footer {
     body {
         max-width: 375px;
     }
+    .about-part .rightside {
+        display: inline;
+    }
+
 }
