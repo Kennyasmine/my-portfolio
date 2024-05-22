@@ -10,22 +10,29 @@
     align-items: center;
     padding: 20px;
     color: black;
-    /* position: fixed; */
-    /* width: 100%; */
 }
 .left img {
     max-width: 100%;
     height: auto;
     border: 2px solid #7843e9;
     border-radius: 50px;
+    overflow: hidden;
+    margin-right: 1.5rem;
+}
+.header-logo-sub {
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 .right nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     color: black;
+    font-size: 20px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: 500;
+    font-weight: 600;
 }
 .right nav ul li {
     display: inline-block;
@@ -95,6 +102,7 @@
     border: 2px solid #7843e9;
     color: #7843e9;
     background-color: transparent;
+    transform: translateY(-3px);
 }
 .mouse {
     width: 25px;
@@ -264,8 +272,8 @@ form {
 }
 .contact-form {
     width: 50%;
-    margin: auto;
-    height: 50%;
+    margin: 5rem auto 0 auto;
+    /* height: 30%; */
     padding: 20px;
     background-color: #ffffff;
     border-radius: 5px;
@@ -398,13 +406,29 @@ footer {
 .copyright {
     padding-top: 30px;
     text-align: center;
+    margin-bottom: 20px;
 }
-@media (max-width: 375px) {
-    body {
-        max-width: 375px;
+@media screen and (max-width: 300px) {
+    html {
+        font-size: 80%;
     }
-    .about-part .rightside {
-        display: inline;
+    .hero-section {
+        padding:0 2rem;
     }
+}
 
+@media screen and (max-width: 300px) {
+    html {
+        font-size: 80%;
+    }
+}
+@media screen and (max-width: 450px) {
+    html {
+        font-size: 85%;
+    }
+}
+@media screen and (max-width: 500px) {
+    html {
+        font-size: 90%;
+    }
 }
