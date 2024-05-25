@@ -83,10 +83,6 @@
     color: #111;
     font-weight: 600;
     padding-top: 200px;
-    /* margin-block-start: 0.83rem;
-    margin-block-end: 0.83rem;
-    margin-inline-start: 0;
-    margin-inline-end: 0; */
 }
 .hero p {
     color: #333;
@@ -157,7 +153,7 @@
     max-width: 50rem;
     margin: auto;
     line-height: 1.6;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 .about-part {
     display: flex;
@@ -290,27 +286,41 @@
     line-height: 1.6;
     margin-bottom: 50px;
 }
-form {
-    display: block;
-    /* text-align: center; */
+.section-contact {
+    padding: 50px;
+    background-color: #f8f9fa;
 }
+.contact {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.contact h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.contact p {
+    font-size: 18px;
+    color: #666;
+}
+
+/* Styling for contact form */
 .contact-form {
     width: 50%;
     margin: 5rem auto 0 auto;
-    /* height: 30%; */
     padding: 20px;
     background-color: #ffffff;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     justify-content: center;
-    /* margin-bottom: 80px; */
 }
+
 .form-group {
     margin-bottom: 20px;
-    /* display: flex; 
-    flex-direction: column;  */
 }
-label {
+
+.form-group label {
     display: block;
     margin-bottom: 5px;
     font-size: 1rem;
@@ -321,13 +331,21 @@ label {
     margin: auto;
     line-height: 1.6;
 }
-input {
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
     width: 100%;
     height: 50px;
     padding: 1px;
     border: 0;
     border-radius: 5px;
     background-color: rgba(153, 153, 153, 0.2);
+}
+
+.form-group textarea {
+    height: 150px;
+    resize: vertical;
 }
 #message {
     height: 200px;
@@ -341,7 +359,7 @@ button {
     padding: 10px 20px;
     font-size: 1rem;
     text-decoration: none;
-    background: #7843e9;
+    bbackground: #7843e9;
     color: #fff;
     letter-spacing: 1px;
     display: inline-block;
@@ -351,8 +369,6 @@ button {
     transition: transform .3s;
     margin-left: 20px;
     margin-bottom: 20px;
-    /* width: fit-content;
-    align-self: flex-end; */
 }
 button:hover{
     cursor: pointer;
@@ -439,14 +455,33 @@ footer {
 @media screen and (max-width: 768px) {
     .hero-section {
         flex-direction: column;
-        text-align: center;
+        align-items: flex-start;
     }
-    .header-logo-sub {
-        text-align: left;
+    /* .hero-section .left {
+        margin-bottom: 20px;
+    } */
+    .hero-section .right {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
-
+    .hero-section .right nav {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+    .hero-section nav ul {
+        flex-direction: column;
+        display: none;
+        width: 100%;
+    }
+    .hero-section nav ul li {
+        margin: 10px 0;
+    }
     .left img {
-        width: 30px; /* Adjust as needed */
+        width: 50px; /* Adjust as needed */
+        height: 50px;
     }
 
     .menu-toggle {
@@ -474,7 +509,50 @@ footer {
     .about-part {
         flex-direction: column;
     }
+    .about p {
+        display: block;
+        text-align: justify;
+        color: #555;
+        font-size: 1rem;
+        font-weight: 500;
+        max-width: 50rem;
+        margin: auto;
+        line-height: 1.6;
+        margin-bottom: 50px;
+    }
+    .rightside ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .rightside ul li {
+        flex: 1 1 auto;
+        padding: 1rem 2rem;
+        margin-bottom: 1rem;
+        margin-right: 1.5rem;
+        font-size: 1rem;
+        background: rgba(153, 153, 153, 0.2);
+        border-radius: 5px;
+        font-weight: 600;
+        color: #666;
+        list-style: none;
+        text-align: right;
+    }
+    .container {
+        flex-direction: column;
+    }
 
+    .about-part {
+        flex-direction: column;
+    }
+
+    .leftside, .rightside {
+        width: 100%;
+    }
+
+    .leftside {
+        margin-bottom: 20px;
+    }
     .about-part .leftside,
     .about-part .rightside {
         text-align: center;
@@ -491,6 +569,88 @@ footer {
 
     .about-part .rightside ul {
         font-size: 14px; /* Adjust as needed */
+    }
+
+    .container.col-xxl-8 {
+        padding: 20px;
+      }
+      
+      .row {
+        flex-direction: column;
+        align-items: center;
+      }
+    
+      .col-10, .col-sm-8, .col-lg-6 {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 20px;
+      }
+    
+      .col-lg-6 {
+        text-align: center;
+      }
+      
+      .display-5 {
+        font-size: 1.25em;
+        text-align: center;
+      }
+      
+      .lead {
+        font-size: 0.9em;
+      }
+
+      .section-contact {
+        padding: 20px;
+    }
+
+    .contact {
+        text-align: center;
+    }
+
+    .contact p {
+        font-size: 14px;
+    }
+
+    .contact-form {
+        margin-top: 20px;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 5px;
+        font-size: 14px;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group textarea {
+        width: 100%;
+        padding: 10px;
+        font-size: 14px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+
+    .form-group textarea {
+        height: 100px;
+        resize: vertical;
+    }
+
+    .btn {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
     }
 
     .foot {
@@ -519,21 +679,42 @@ footer {
     }
 }
 
+/* Media queries for larger screens */
+/* @media (min-width: 768px) {
+    .about-part {
+        flex-direction: row;
+        justify-content: space-between;
+    }
 
+    .leftside, .rightside {
+        width: 35%;
+    }
 
-
-/* @media screen and (max-width: 300px) {
-    html {
-        font-size: 80%;
+    .leftside, .rightside {
+        text-align: left;
     }
 }
-@media screen and (max-width: 450px) {
-    html {
-        font-size: 85%;
+
+@media (min-width: 1024px) {
+    .section-about {
+        padding: 40px;
     }
-}
-@media screen and (max-width: 500px) {
-    html {
-        font-size: 90%;
+
+    .section-about h1 {
+        font-size: 2.5em;
+    }
+
+    .leftside h3, .rightside h3 {
+        font-size: 2em;
+    }
+
+    .leftside p, .rightside ul {
+        font-size: 1.2em;
+    }
+
+    .btn {
+        font-size: 1.2em;
+        padding: 15px 30px;
     }
 } */
+
